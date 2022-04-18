@@ -13,12 +13,6 @@ class ArticleController extends Controller
         return response()->json($articles, 200);
     }
 
-    public function create(Request $request)
-    {
-        $article = (new ArticleService())->create($request->all());
-        return response()->json($article, 200);
-    }
-
     public function getOne(Request $request, $article_id)
     {
         $article = (new ArticleService())->getOne($article_id);
