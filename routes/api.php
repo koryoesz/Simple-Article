@@ -23,3 +23,4 @@ Route::get('articles', [ArticleController::class, 'getAll']);
 Route::get('articles/{article_id}', [ArticleController::class, 'getOne']);
 Route::put('articles/{article_id}/like', [ArticleController::class, 'increaseLike']);
 Route::put('articles/{article_id}/view', [ArticleController::class, 'increaseView']);
+Route::put('articles/{article_id}/comment', [ArticleController::class, 'getComment']);

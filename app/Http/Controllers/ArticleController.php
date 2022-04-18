@@ -31,4 +31,10 @@ class ArticleController extends Controller
         return response()->json($article, 200);
     }
 
+    public function getComment(Request $request, $article_id)
+    {
+        $article = (new ArticleService())->getComment($article_id);
+        return response()->json($article, 200);
+    }
+
 }
