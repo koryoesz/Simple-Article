@@ -5,6 +5,26 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Services\ArticleService;
 
+
+/**
+ * @OA\Post(
+ * path="/articles",
+ * summary="Get All articles",
+ * description="",
+ * operationId="",
+ * tags={"articles"},
+ * @OA\RequestBody(
+ * ),
+ * @OA\Response(
+ *    response=422,
+ *    description="Wrong credentials response",
+ *    @OA\JsonContent(
+ *       @OA\Property(property="message", type="string", example="No Articles Found!")
+ *        )
+ *     )
+ * )
+ */
+
 class ArticleController extends Controller
 {
     public function getAll(Request $request)
