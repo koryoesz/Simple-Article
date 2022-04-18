@@ -23,7 +23,7 @@ class ArticleService
 
     public function getAll()
     {
-        return Article::paginate(10);
+        return Article::orderBy('created_at', 'desc')->paginate(10);
     }
 
     public function articleIncreaseLikeCount($article_id)
